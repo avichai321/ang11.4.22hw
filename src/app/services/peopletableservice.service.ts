@@ -14,4 +14,7 @@ export class PeopletableserviceService {
   getPeopletable(){
     return this.peopletableinner.get(`${this.peopleserver}`);
   }
+  getOnePerson(id :any){
+    return this.peopletableinner.get(`${this.peopleserver}/${id}`)
+  }
 }

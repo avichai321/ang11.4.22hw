@@ -11,8 +11,9 @@ import { PeopleTableCompComponent } from './people-table-comp/people-table-comp.
 import { PeopleInfoCompComponent } from './people-info-comp/people-info-comp.component';
 
 const Peoplerou: Routes = [
-  {path:'' ,component:AppComponent},
-  {path: 'people-table-comp/:id', component:PeopleInfoCompComponent}
+ 
+  {path: 'people-table', component:PeopleTableCompComponent},
+  {path: 'people-info/:id', component:PeopleInfoCompComponent}
 ]
 @NgModule({
   declarations: [

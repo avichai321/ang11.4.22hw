@@ -12,7 +12,7 @@ import { PeopleInfoCompComponent } from './people-info-comp/people-info-comp.com
 
 const Peoplerou: Routes = [
  
-  {path: 'people-table', component:PeopleTableCompComponent},
+  {path: '', component:PeopleTableCompComponent},
   {path: 'people-info/:id', component:PeopleInfoCompComponent}
 ]
 @NgModule({

@@ -1,12 +1,15 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">{{insideinfo.firstname}}</li>
-    <li class="list-group-item">A dfgdm</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
+<div class="container">
+<h2>{{insideinfo.name.firstname}} {{insideinfo.name.lastname}} Full info</h2>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item">Username: {{insideinfo.username}}</li>
+      <li class="list-group-item">Password: {{insideinfo.password}} </li>
+      <li class="list-group-item">Email: {{insideinfo.email}}</li>
+      <li class="list-group-item">Geolocation: lat: {{insideinfo.address.geolocation.lat}} long: {{insideinfo.address.geolocation.long}} </li>
+      <li class="list-group-item">City: {{insideinfo.address.city}} </li>
+      <li class="list-group-item">Street: {{insideinfo.address.street}}</li>
+      <li class="list-group-item">Number: {{insideinfo.address.number}}</li>
+      <li class="list-group-item">Zip code {{insideinfo.address.zipcode}}</li>
+    </ul>
 
-  <div>
-    {{insideinfo.firstname}}
-  </div>
+</div>
   

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit ,Input} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeopletableserviceService } from '../services/peopletableservice.service';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-people-info-comp',
@@ -11,10 +11,15 @@ import { Observable } from 'rxjs';
 })
 export class PeopleInfoCompComponent implements OnInit {
 
-insideinfo:any = {};
-  constructor(private singlePerson:PeopletableserviceService ) {
-   this.singlePerson.getOnePerson(this.insideinfo.id).subscribe((per:any)=>{
+insideinfo:any={};
+id:number=0;
+  constructor(private singlePerson:PeopletableserviceService ,private route:ActivatedRoute ) {
+    this.route.params.subscribe(params => {
+      this.id=params['id']
+    })
+   this.singlePerson.getOnePerson(this.id).subscribe((per:any)=>{
       this.insideinfo= per;
+
     })
    }
 
